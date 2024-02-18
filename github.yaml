@@ -1,0 +1,28 @@
+name: ci-cd actions
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.8'
+      - name: install requirements
+        run:
+          python3 -m pip install -r requirements.txt
+      - name: testing the application
+        env: 
+          MODE: "DEMO"
+        run: |
+          pytest src/tests.py
+         
+  
+
