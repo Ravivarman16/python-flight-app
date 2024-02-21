@@ -27,7 +27,7 @@ SECRET_KEY = '=k3z-^1ov_hy5y%ebw(2e-npk@$#!(c8ix=+7so*hmw9m0c52*'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
+    '127.0.0.1','34.27.76.228'
     'flight-web-app.herokuapp.com','python-bpefgntamq-uc.a.run.app'
 ]
 
